@@ -22,9 +22,9 @@
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (quotes'' --- dashes etc.) to unicode
-% \setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Palatino}
-% \setmonofont[Scale=1.0]{Monaco} 
-% \setsansfont[Scale=1.0]{Optima Regular} 
+\setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Fira Sans}
+\setmonofont[Scale=1.0]{Fira Mono} 
+\setsansfont[Scale=1.0]{Fira Sans} 
 
 % HEADINGS and TITLES
 \usepackage{sectsty}
@@ -36,11 +36,11 @@
 
 \usepackage{titling}
 \setlength{\droptitle}{-90pt} % The negative number moves the title closer to the top of the page
-\title{$title$} % name $if(title)$$title$$endif$
+\title{$if(title)$$title$$endif$} % name 
 \date{$if(date)$$date$\\$endif$} % Leave blank to remove the date
 \author{$if(website)$$website$\\\\$endif$
-$street$ \textbar{} $city$, $postcode$\\ %Put your address here
-$phone$ \textbar{} $email$ } % put your contact information here
+$if(email)$$email$\\$endif$
+$phone$} % put your contact information here
 
 % BEGIN DOCUMENT
 \begin{document}
